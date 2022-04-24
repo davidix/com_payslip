@@ -1,6 +1,6 @@
 <?php
 defined("_JEXEC") or die("Restricted access");
-require_once JPATH_COMPONENT_ADMINISTRATOR.  '/lib/PHPExcel/PHPExcel.php';
+require_once __DIR__ . '/../lib/PHPExcel/PHPExcel.php';
 
 class PayslipControllerPayslips extends JControllerAdmin
 {
