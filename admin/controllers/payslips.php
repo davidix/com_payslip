@@ -71,15 +71,15 @@ class PayslipControllerPayslips extends JControllerAdmin
 			{
 				//die(print_r($row));
 				$rows[] = array(
-				$db->quote($row['نام'].' '.$row['نام خانوادگي'].' - '.$row['ماه / سال جاري']),
-				$db->quote($row['کد پرسنلي']),
-				$db->quote($row['کد پرسنلي'])//json_encode($row)
+				$db->quote($row['نام'].' '.$row['نام خانوادگي'].' - '.$row['ماه جاري']),
+				$db->quote($row['كد ملي']),
+				$db->quote($row['كد ملي'])//json_encode($row)
 				);
 				
 				$str.='('.
-				$db->quote($row['نام'].' '.$row['نام خانوادگي'].' - '.$row['ماه / سال جاري']).','.
+				$db->quote($row['نام'].' '.$row['نام خانوادگي'].' - '.$row['ماه جاري']).','.
 				//$db->quote($row['نام']).','.
-				$db->quote($row['کد پرسنلي']).','.
+				$db->quote($row['كد ملي']).','.
 				$db->quote(json_encode($row));//json_encode($row);
 				if ($i == $len - 1)
 				$str.=')';
@@ -96,6 +96,17 @@ class PayslipControllerPayslips extends JControllerAdmin
 				);
 
 			// Set the query using our newly populated query object and execute it.
+			$db->setQuery($query);
+			$db->execute();
+	}
+
+
+	public function cleardata()
+	{
+			$db = JFactory::getDbo();
+			$query = $db->getQuery(true);
+
+			$db->truncateTable(`#__payslip_payslips`);
 			$db->setQuery($query);
 			$db->execute();
 	}
