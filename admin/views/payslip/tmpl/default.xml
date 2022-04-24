@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_PAYSLIP_PAYSLIP_PAYSLIPS_VIEW_ITEM_TITLE" option="COM_PAYSLIP_PAYSLIP_PAYSLIPS_VIEW_ITEM_DESC">
+		<help
+			key = "JHELP_MENUS_MENU_ITEM_PAYSLIP_SINGLE_PAYSLIP"
+		/>
+		<message>
+			<![CDATA[COM_PAYSLIP_PAYSLIP_PAYSLIPS_VIEW_ITEM_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_payslip/models/fields">
+			<field
+				name="id"
+				type="modal_payslip"
+				description="COM_PAYSLIP_FIELD_SELECT_PAYSLIP_DESC"
+				label="COM_PAYSLIP_FIELD_SELECT_PAYSLIP_LABEL"
+				required="true"
+				edit="true"
+				clear="false"
+			/>
+		</fieldset>
+	</fields>
+
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<!-- Basic options. -->
+		<fieldset name="basic" label="COM_PAYSLIP_FIELDSET_MORE_OPTIONS_LABEL">
+		</fieldset>
+	</fields>
+</metadata>
