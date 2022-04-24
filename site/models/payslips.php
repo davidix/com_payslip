@@ -21,11 +21,11 @@ class PayslipModelPayslips extends JModelList
 		$groups = $user->get('groups');
 		JLoader::register('FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/helpers/fields.php');
 		$customFields = FieldsHelper::getFields('com_users.user', JFactory::getUser(), true);
-	
-		if($customFields[0]->value !=null && $groups[0]!=10)
-			return $customFields[0]->value;
-		else
-			return 0;
+		return $user->username;
+		// if($customFields[0]->value !=null && $groups[0]!=10)
+		// 	return $customFields[0]->value;
+		// else
+		// 	return 0;
 	}
 	
 	/**

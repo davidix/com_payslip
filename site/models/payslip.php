@@ -19,7 +19,7 @@ class PayslipModelPayslip extends JModelAdmin
 	{
 		JLoader::register('FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/helpers/fields.php');
 		$customFields = FieldsHelper::getFields('com_users.user', JFactory::getUser(), true);
-		return $customFields[0]->value;
+		return JFactory::getUser()->username;
 	}
 	/**
 	 * @var        string    The prefix to use with controller messages.
