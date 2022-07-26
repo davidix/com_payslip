@@ -510,70 +510,34 @@ _p('خالص پرداختي','خالص پرداختي',$Values,true,false);
 <!--
 
 <table class="table table-striped">
-
 	<tbody>
-
 			<tr>
-
 				<td>Title</td>
-
 				<td><?php echo $this->escape($this->item->title); ?></td>
-
 			</tr>
-
 			<tr>
-
 				<td>Prs_no</td>
-
 				<td><?php echo $this->escape($this->item->prs_no); ?></td>
-
 			</tr>
-
 			<tr>
-
 				<td>Values</td>
-
 				<td>
-
 				<?php //echo $this->escape($this->item->values);
-
-					
-
 					/*
-
 					foreach($Values as $key => $val)
-
 					{
-
 						echo $key.' :-> '.$val;
-
 						echo '<br>';
-
 					}
-
 */
-
 				?>
-
 				</td>
-
 			</tr>
-
 		<tr>
-
-			
-
 		</tr>
-
 	</tbody>
-
 </table>
-
 -->
-
-
-
-
 
 <script>
 
